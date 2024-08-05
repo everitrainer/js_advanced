@@ -27,3 +27,13 @@ const [sub1, , sub3] = subjects
 
 console.log(`sub1 ${sub1} sub2 ${sub3}`)
 
+
+// 3. Default parameters
+
+function hike(salary, percent = 10) {
+    return salary + salary * percent / 100
+}
+const latestSal1 = hike(100000)
+const latestSal2 = hike(100000, 30)
+console.log(latestSal1) // 110k
+console.log(latestSal2) // 130k
