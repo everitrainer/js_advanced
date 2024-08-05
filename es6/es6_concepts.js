@@ -37,3 +37,42 @@ const latestSal1 = hike(100000)
 const latestSal2 = hike(100000, 30)
 console.log(latestSal1) // 110k
 console.log(latestSal2) // 130k
+
+
+// 4. Rest or Spread
+
+function sum(a, b, ...args) {
+    let sum = 0;
+    for (let i = 0; i < args.length; i++) sum += args[i]
+    return sum;
+}
+
+console.log(sum(2, 3, 5, 3, 2, 2))
+console.log(sum(2, 4, 2, 8))
+
+
+const { name: tempName, place: newPlace, ...copyComp } = company
+console.log(tempName)
+console.log(newPlace)
+console.log(copyComp)
+
+// 5. Spread
+const arr1 = [2, 3, 5, 3, 2, 2];
+const arr2 = [2, 3, 5, 3, 7, 8, 8, 9]
+
+const arr3 = [...arr1, ...arr2]
+console.log(arr3)
+
+const food = "PP";
+const price = 25;
+const isSpicy = true;
+
+// 6.Object Literal Extensions
+const obj = {
+    food,
+    price,
+    isSpicy,
+    sum
+
+}
+console.log(obj)
